@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/EDB2CacaPalavras.dir/src/avl.c.o CMakeFiles/EDB2CacaPalavras.dir/src/jogo.c.o CMakeFiles/EDB2CacaPalavras.dir/src/main.c.o CMakeFiles/EDB2CacaPalavras.dir/src/trie.c.o -o EDB2CacaPalavras

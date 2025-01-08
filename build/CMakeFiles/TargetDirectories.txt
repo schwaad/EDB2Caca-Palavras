@@ -1,0 +1,3 @@
+/home/schwaad/Área de trabalho/Programação/C/EDB2/Caca_Palavras/build/CMakeFiles/EDB2CacaPalavras.dir
+/home/schwaad/Área de trabalho/Programação/C/EDB2/Caca_Palavras/build/CMakeFiles/edit_cache.dir
+/home/schwaad/Área de trabalho/Programação/C/EDB2/Caca_Palavras/build/CMakeFiles/rebuild_cache.dir
