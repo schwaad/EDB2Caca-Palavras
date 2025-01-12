@@ -28,11 +28,13 @@ CMakeFiles/EDB2CacaPalavras.dir/src/avl.c.o: /home/schwaad/Área\ de\ trabalho/P
   /usr/include/bits/types/__FILE.h \
   /usr/include/bits/types/__fpos64_t.h \
   /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__locale_t.h \
   /usr/include/bits/types/__mbstate_t.h \
   /usr/include/bits/types/__sigset_t.h \
   /usr/include/bits/types/clock_t.h \
   /usr/include/bits/types/clockid_t.h \
   /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/sigset_t.h \
   /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/struct_timespec.h \
@@ -52,6 +54,8 @@ CMakeFiles/EDB2CacaPalavras.dir/src/avl.c.o: /home/schwaad/Área\ de\ trabalho/P
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
@@ -59,9 +63,9 @@ CMakeFiles/EDB2CacaPalavras.dir/src/avl.c.o: /home/schwaad/Área\ de\ trabalho/P
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h
 
 CMakeFiles/EDB2CacaPalavras.dir/src/jogo.c.o: /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/jogo.c \
+  /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/trie.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/utils.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/jogo.h \
-  /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/utils.h \
   /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
@@ -119,10 +123,13 @@ CMakeFiles/EDB2CacaPalavras.dir/src/jogo.c.o: /home/schwaad/Área\ de\ trabalho/
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdbool.h \
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h
 
 CMakeFiles/EDB2CacaPalavras.dir/src/main.c.o: /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/main.c \
+  /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/trie.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/utils.h \
+  /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/avl.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/jogo.h \
   /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
@@ -181,6 +188,7 @@ CMakeFiles/EDB2CacaPalavras.dir/src/main.c.o: /home/schwaad/Área\ de\ trabalho/
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdbool.h \
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h
 
 CMakeFiles/EDB2CacaPalavras.dir/src/trie.c.o: /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/trie.c \
@@ -307,29 +315,27 @@ CMakeFiles/EDB2CacaPalavras.dir/src/utils.c.o: /home/schwaad/Área\ de\ trabalho
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h
 
 
-/home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/trie.h:
+/home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/jogo.h:
+
+/home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/utils.h:
 
 /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/trie.c:
 
-/usr/include/strings.h:
+/home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/trie.h:
 
-/usr/include/bits/types/locale_t.h:
+/home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/jogo.c:
 
-/usr/include/bits/types/__locale_t.h:
+/usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h:
 
 /usr/include/bits/types/FILE.h:
+
+/usr/include/bits/types/__locale_t.h:
 
 /usr/include/bits/types.h:
 
 /usr/include/sys/cdefs.h:
 
-/usr/include/string.h:
-
-/usr/include/bits/time64.h:
-
 /usr/include/bits/byteswap.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h:
 
 /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/utils.c:
 
@@ -351,21 +357,21 @@ CMakeFiles/EDB2CacaPalavras.dir/src/utils.c.o: /home/schwaad/Área\ de\ trabalho
 
 /usr/include/bits/libc-header-start.h:
 
-/usr/include/bits/types/__sigset_t.h:
+/usr/include/strings.h:
+
+/usr/include/alloca.h:
 
 /usr/include/bits/timesize.h:
 
 /usr/include/bits/endian.h:
 
+/usr/include/bits/types/__sigset_t.h:
+
 /usr/include/bits/waitflags.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h:
 
-/usr/include/alloca.h:
-
 /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/avl.h:
-
-/home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/jogo.c:
 
 /usr/include/bits/endianness.h:
 
@@ -407,13 +413,17 @@ CMakeFiles/EDB2CacaPalavras.dir/src/utils.c.o: /home/schwaad/Área\ de\ trabalho
 
 /usr/include/bits/typesizes.h:
 
+/usr/include/bits/time64.h:
+
+/usr/include/string.h:
+
+/usr/include/bits/types/locale_t.h:
+
 /usr/include/bits/types/struct_FILE.h:
 
 /usr/include/sys/select.h:
 
 /usr/include/bits/types/struct_timespec.h:
-
-/home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/utils.h:
 
 /usr/include/bits/stdio_lim.h:
 
@@ -440,5 +450,3 @@ CMakeFiles/EDB2CacaPalavras.dir/src/utils.c.o: /home/schwaad/Área\ de\ trabalho
 /usr/include/stdio.h:
 
 /usr/include/sys/types.h:
-
-/home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/jogo.h:
