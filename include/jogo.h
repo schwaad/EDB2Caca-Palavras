@@ -1,3 +1,4 @@
+#include "./trie.h"
 #include "./utils.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,6 +8,6 @@
 #define JOGO_H
 
 char **ler_tabuleiro(const char *caminhoTabuleiro);
-char **ler_palavras(const char *caminhoPalavras);
+Trie *ler_palavras(const char *caminhoPalavras);
 
 #endif

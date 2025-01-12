@@ -1,5 +1,4 @@
 #include "../include/jogo.h"
-#include "../include/utils.h"
 
 char **ler_tabuleiro(const char *caminhoTabuleiro) {
   FILE *arquivo = fopen(caminhoTabuleiro, "r");
@@ -25,21 +24,21 @@ char **ler_tabuleiro(const char *caminhoTabuleiro) {
   return tabuleiro;
 }
 
-char **ler_palavras(const char *caminhoPalavras) {
+Trie *ler_palavras(const char *caminhoPalavras) {
   FILE *arquivo = fopen(caminhoPalavras, "r");
   if (arquivo == NULL) {
     perror("Erro ao abrir o arquivo palavras.txt");
     exit(1);
   }
   int qtdPalavras = contar_linhas(caminhoPalavras);
-  char **lista_palavras = malloc(qtdPalavras * sizeof(char *));
+  Trie *trie = criar_no_trie();
   char linha[50];
   int i = 0;
   while (fgets(linha, sizeof(linha), arquivo)) {
     remove_new_line(linha);
-    lista_palavras[i] = strdup(linha);
+    inserir(trie, linha);
     i++;
   }
   fclose(arquivo);
-  return lista_palavras;
+  return trie;
 }
