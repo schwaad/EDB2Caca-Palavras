@@ -1,34 +1,32 @@
 #include "../include/avl.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int obter_altura(No *no) {
-  if (no == NULL)
+int obter_altura(AVL *avl) {
+  if (avl == NULL)
     return -1;
   else
-    return no->altura;
+    return avl->altura;
 }
 
-int calcular_fator_de_balanceamento(No *no) {
-  if (no == NULL)
+int calcular_fator_de_balanceamento(AVL *avl) {
+  if (avl == NULL)
     return 0;
   else
-    return obter_altura(no->esquerdo) - obter_altura(no->direito);
+    return obter_altura(avl->esquerdo) - obter_altura(avl->direito);
 }
 
-No *criar_no_avl(int dado) {
-  No *no = (No *)malloc(sizeof(No));
-  no->dado = dado;
-  no->esquerdo = NULL;
-  no->direito = NULL;
-  no->altura = 0;
+AVL *criar_no_avl(char *dado) {
+  AVL *avl = (AVL *)malloc(sizeof(AVL));
+  avl->dado = dado;
+  avl->esquerdo = NULL;
+  avl->direito = NULL;
+  avl->altura = 0;
 
-  return no;
+  return avl;
 }
 
-No *rotacao_direita(No *y) {
-  No *x = y->esquerdo;
-  No *z = x->direito;
+AVL *rotacao_direita(AVL *y) {
+  AVL *x = y->esquerdo;
+  AVL *z = x->direito;
 
   x->direito = y;
   y->esquerdo = z;
@@ -46,9 +44,9 @@ No *rotacao_direita(No *y) {
   return x;
 }
 
-No *rotacao_esquerda(No *x) {
-  No *y = x->direito;
-  No *z = y->esquerdo;
+AVL *rotacao_esquerda(AVL *x) {
+  AVL *y = x->direito;
+  AVL *z = y->esquerdo;
 
   y->esquerdo = x;
   x->direito = z;
@@ -66,13 +64,13 @@ No *rotacao_esquerda(No *x) {
   return y;
 }
 
-No *inserir_no(No *no, int dado) {
+AVL *inserir_no(AVL *no, char *dado) {
   if (no == NULL)
     return criar_no_avl(dado);
 
-  if (dado < no->dado)
+  if (strcmp(dado, no->dado) < 0)
     no->esquerdo = inserir_no(no->esquerdo, dado);
-  else if (dado > no->dado)
+  else if (strcmp(dado, no->dado) > 0)
     no->direito = inserir_no(no->direito, dado);
   else
     return no;
@@ -84,24 +82,18 @@ No *inserir_no(No *no, int dado) {
 
   int balanceamento = calcular_fator_de_balanceamento(no);
 
-  /* Caso 1: Desbalanceamento à esquerda (Rotação à direita). */
-  if (balanceamento > 1 && dado < no->esquerdo->dado)
+  if (balanceamento > 1 && strcmp(dado, no->esquerdo->dado) == -1)
     return rotacao_direita(no);
 
-  /* Caso 2: Desbalanceamento à direita (Rotação à esquerda). */
-  if (balanceamento < -1 && dado > no->direito->dado)
+  if (balanceamento < -1 && strcmp(dado, no->direito->dado) == 1)
     return rotacao_esquerda(no);
 
-  /* Caso 3: Desbalanceamento esquerda-direita (Rotação dupla esquerda-direita).
-   */
-  if (balanceamento > 1 && dado > no->esquerdo->dado) {
+  if (balanceamento > 1 && strcmp(dado, no->esquerdo->dado) == 1) {
     no->esquerdo = rotacao_esquerda(no->esquerdo);
     return rotacao_direita(no);
   }
 
-  /* Caso 4: Desbalanceamento direita-esquerda (Rotação dupla direita-esquerda).
-   */
-  if (balanceamento < -1 && dado < no->direito->dado) {
+  if (balanceamento < -1 && strcmp(dado, no->direito->dado) == -1) {
     no->direito = rotacao_direita(no->direito);
     return rotacao_esquerda(no);
   }
@@ -109,8 +101,8 @@ No *inserir_no(No *no, int dado) {
   return no;
 }
 
-No *menor_valorNo(No *no) {
-  No *atual = no;
+AVL *menor_valorNo(AVL *avl) {
+  AVL *atual = avl;
 
   while (atual->esquerdo != NULL)
     atual = atual->esquerdo;
@@ -118,7 +110,7 @@ No *menor_valorNo(No *no) {
   return atual;
 }
 
-No *remover_no(No *raiz, int dado) {
+AVL *remover_no(AVL *raiz, char *dado) {
   if (raiz == NULL)
     return raiz;
 
@@ -127,16 +119,14 @@ No *remover_no(No *raiz, int dado) {
   } else if (dado > raiz->dado) {
     raiz->direito = remover_no(raiz->direito, dado);
   } else {
-    /* Nó com apenas um filho ou nenhum. */
     if ((raiz->esquerdo == NULL) || (raiz->direito == NULL)) {
-      No *temp;
+      AVL *temp;
 
       if (raiz->esquerdo != NULL)
         temp = raiz->esquerdo;
       else
         temp = raiz->direito;
 
-      /* Caso de nenhum filho. */
       if (temp == NULL) {
         temp = raiz;
         raiz = NULL;
@@ -146,8 +136,7 @@ No *remover_no(No *raiz, int dado) {
 
       free(temp);
     } else {
-      /* Caso de dois filhos: obtém o sucessor. */
-      No *temp = menor_valorNo(raiz->direito);
+      AVL *temp = menor_valorNo(raiz->direito);
 
       raiz->dado = temp->dado;
 
@@ -155,7 +144,6 @@ No *remover_no(No *raiz, int dado) {
     }
   }
 
-  /* Se a árvore tinha apenas um nó. */
   if (raiz == NULL)
     return raiz;
 
@@ -166,22 +154,18 @@ No *remover_no(No *raiz, int dado) {
 
   int balanceamento = calcular_fator_de_balanceamento(raiz);
 
-  /* Caso 1: Desbalanceamento à esquerda. */
   if (balanceamento > 1 && calcular_fator_de_balanceamento(raiz->esquerdo) >= 0)
     return rotacao_direita(raiz);
 
-  /* Caso 2: Desbalanceamento esquerda-direita. */
   if (balanceamento > 1 &&
       calcular_fator_de_balanceamento(raiz->esquerdo) < 0) {
     raiz->esquerdo = rotacao_esquerda(raiz->esquerdo);
     return rotacao_direita(raiz);
   }
 
-  /* Caso 3: Desbalanceamento à direita. */
   if (balanceamento < -1 && calcular_fator_de_balanceamento(raiz->direito) <= 0)
     return rotacao_esquerda(raiz);
 
-  /* Caso 4: Desbalanceamento direita-esquerda. */
   if (balanceamento < -1 &&
       calcular_fator_de_balanceamento(raiz->direito) > 0) {
     raiz->direito = rotacao_direita(raiz->direito);
@@ -191,10 +175,10 @@ No *remover_no(No *raiz, int dado) {
   return raiz;
 }
 
-void imprimir_em_ordem(No *raiz) {
+void imprimir_em_ordem(AVL *raiz) {
   if (raiz != NULL) {
     imprimir_em_ordem(raiz->esquerdo);
-    printf("%d ", raiz->dado);
+    printf("%s ", raiz->dado);
     imprimir_em_ordem(raiz->direito);
   }
 }
