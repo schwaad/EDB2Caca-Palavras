@@ -7,14 +7,14 @@
 #define TRIE_H
 #define ALFABETO 26
 
-typedef struct No {
-  struct No *filhos[ALFABETO];
+typedef struct Trie {
+  struct Trie *filhos[ALFABETO];
   bool fim_da_palavra;
-} No;
+} Trie;
 
-No *criar_no_trie();
-void inserir(No *raiz, const char *palavra);
-bool buscar(No *raiz, const char *palavra);
-void liberar_trie(No *raiz);
+Trie *criar_no_trie();
+void inserir(Trie *raiz, const char *palavra);
+bool buscar(Trie *raiz, const char *palavra);
+void liberar_trie(Trie *raiz);
 
 #endif

@@ -1,7 +1,7 @@
 #include "../include/trie.h"
 
-No *criar_no_trie() {
-  No *novo_no = (No *)malloc(sizeof(No));
+Trie *criar_no_trie() {
+  Trie *novo_no = (Trie *)malloc(sizeof(Trie));
 
   if (novo_no) {
     novo_no->fim_da_palavra = false;
@@ -13,8 +13,8 @@ No *criar_no_trie() {
   return novo_no;
 }
 
-void inserir(No *raiz, const char *palavra) {
-  No *atual = raiz;
+void inserir(Trie *raiz, const char *palavra) {
+  Trie *atual = raiz;
 
   for (int i = 0; palavra[i] != '\0'; i++) {
     int indice = palavra[i] - 'a';
@@ -28,8 +28,8 @@ void inserir(No *raiz, const char *palavra) {
   atual->fim_da_palavra = true;
 }
 
-bool buscar(No *raiz, const char *palavra) {
-  No *atual = raiz;
+bool buscar(Trie *raiz, const char *palavra) {
+  Trie *atual = raiz;
 
   for (int i = 0; palavra[i] != '\0'; i++) {
     int indice = palavra[i] - 'a';
@@ -43,7 +43,7 @@ bool buscar(No *raiz, const char *palavra) {
   return atual->fim_da_palavra;
 }
 
-void liberar_trie(No *raiz) {
+void liberar_trie(Trie *raiz) {
   if (raiz == NULL)
     return;
 
