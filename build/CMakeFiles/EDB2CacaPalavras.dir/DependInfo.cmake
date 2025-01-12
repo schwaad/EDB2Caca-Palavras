@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/schwaad/Área de trabalho/Programação/C/EDB2/Caca_Palavras/src/jogo.c" "CMakeFiles/EDB2CacaPalavras.dir/src/jogo.c.o" "gcc" "CMakeFiles/EDB2CacaPalavras.dir/src/jogo.c.o.d"
   "/home/schwaad/Área de trabalho/Programação/C/EDB2/Caca_Palavras/src/main.c" "CMakeFiles/EDB2CacaPalavras.dir/src/main.c.o" "gcc" "CMakeFiles/EDB2CacaPalavras.dir/src/main.c.o.d"
   "/home/schwaad/Área de trabalho/Programação/C/EDB2/Caca_Palavras/src/trie.c" "CMakeFiles/EDB2CacaPalavras.dir/src/trie.c.o" "gcc" "CMakeFiles/EDB2CacaPalavras.dir/src/trie.c.o.d"
+  "/home/schwaad/Área de trabalho/Programação/C/EDB2/Caca_Palavras/src/utils.c" "CMakeFiles/EDB2CacaPalavras.dir/src/utils.c.o" "gcc" "CMakeFiles/EDB2CacaPalavras.dir/src/utils.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

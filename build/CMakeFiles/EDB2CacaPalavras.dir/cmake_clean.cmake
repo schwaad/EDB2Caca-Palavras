@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/EDB2CacaPalavras.dir/src/main.c.o.d"
   "CMakeFiles/EDB2CacaPalavras.dir/src/trie.c.o"
   "CMakeFiles/EDB2CacaPalavras.dir/src/trie.c.o.d"
+  "CMakeFiles/EDB2CacaPalavras.dir/src/utils.c.o"
+  "CMakeFiles/EDB2CacaPalavras.dir/src/utils.c.o.d"
   "EDB2CacaPalavras"
   "EDB2CacaPalavras.pdb"
 )
