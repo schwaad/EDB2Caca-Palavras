@@ -2,12 +2,14 @@
 
 Trie *criar_no_trie() {
   Trie *novo_no = (Trie *)malloc(sizeof(Trie));
+  if (novo_no == NULL) {
+    perror("Erro ao alocar memória para o nó da Trie");
+    exit(1);
+  }
 
-  if (novo_no) {
-    novo_no->fim_da_palavra = false;
-    for (int i = 0; i < ALFABETO; i++) {
-      novo_no->filhos[i] = NULL;
-    }
+  novo_no->fim_da_palavra = false;
+  for (int i = 0; i < ALFABETO; i++) {
+    novo_no->filhos[i] = NULL;
   }
 
   return novo_no;
@@ -17,10 +19,16 @@ void inserir(Trie *raiz, const char *palavra) {
   Trie *atual = raiz;
 
   for (int i = 0; palavra[i] != '\0'; i++) {
+    if (palavra[i] < 'a' || palavra[i] > 'z') {
+      fprintf(stderr, "Erro: palavra contém caractere inválido: '%c'\n",
+              palavra[i]);
+      return;
+    }
     int indice = palavra[i] - 'a';
 
-    if (atual->filhos[indice] == NULL)
+    if (atual->filhos[indice] == NULL) {
       atual->filhos[indice] = criar_no_trie();
+    }
 
     atual = atual->filhos[indice];
   }

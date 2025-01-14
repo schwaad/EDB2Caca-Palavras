@@ -2,8 +2,7 @@ CMakeFiles/EDB2CacaPalavras.dir/src/jogo.c.o: \
  /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/jogo.c \
  /usr/include/stdc-predef.h \
  /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/../include/jogo.h \
- /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/../include/./trie.h \
- /usr/lib/gcc/x86_64-redhat-linux/14/include/stdbool.h \
+ /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/../include/./avl.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -37,4 +36,7 @@ CMakeFiles/EDB2CacaPalavras.dir/src/jogo.c.o: \
  /usr/include/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/../include/./utils.h
+ /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/../include/./trie.h \
+ /usr/lib/gcc/x86_64-redhat-linux/14/include/stdbool.h \
+ /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/../include/./utils.h \
+ /usr/include/ctype.h

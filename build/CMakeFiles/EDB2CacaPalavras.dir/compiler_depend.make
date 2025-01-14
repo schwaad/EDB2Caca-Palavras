@@ -63,6 +63,7 @@ CMakeFiles/EDB2CacaPalavras.dir/src/avl.c.o: /home/schwaad/Área\ de\ trabalho/P
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h
 
 CMakeFiles/EDB2CacaPalavras.dir/src/jogo.c.o: /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/jogo.c \
+  /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/avl.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/trie.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/utils.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/jogo.h \
@@ -109,6 +110,7 @@ CMakeFiles/EDB2CacaPalavras.dir/src/jogo.c.o: /home/schwaad/Área\ de\ trabalho/
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
@@ -127,10 +129,12 @@ CMakeFiles/EDB2CacaPalavras.dir/src/jogo.c.o: /home/schwaad/Área\ de\ trabalho/
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h
 
 CMakeFiles/EDB2CacaPalavras.dir/src/main.c.o: /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/src/main.c \
+  /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/avl.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/trie.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/utils.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/avl.h \
   /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/jogo.h \
+  /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/utils.h \
   /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
@@ -174,6 +178,7 @@ CMakeFiles/EDB2CacaPalavras.dir/src/main.c.o: /home/schwaad/Área\ de\ trabalho/
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
@@ -314,6 +319,8 @@ CMakeFiles/EDB2CacaPalavras.dir/src/utils.c.o: /home/schwaad/Área\ de\ trabalho
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h \
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h
 
+
+/usr/include/ctype.h:
 
 /home/schwaad/Área\ de\ trabalho/Programação/C/EDB2/Caca_Palavras/include/jogo.h:
 
